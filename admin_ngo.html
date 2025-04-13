@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NGO Dashboard | FoodShare</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f0e8;
+    }
+
+    .header {
+      background-color: #7b3f3f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .sidebar {
+      height: 100vh;
+      width: 220px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      border-right: 1px solid #ccc;
+      padding-top: 60px;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 12px 20px;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .sidebar a:hover {
+      background-color: #ddd;
+    }
+
+    .content {
+      margin-left: 240px;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #7b3f3f;
+    }
+
+    .logout-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #a8573c;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .logout-btn:hover {
+      background-color: #7b3f3f;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>NGO Dashboard</h1>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+
+  <div class="sidebar">
+    <a href="#">Dashboard Home</a>
+    <a href="#">Available Food Posts</a>
+    <a href="#">My Pickups</a>
+    <a href="#">NGO Profile</a>
+    <a href="#">Contact Support</a>
+  </div>
+
+  <div class="content">
+    <div class="card">
+      <h3>Welcome, [NGO Name]!</h3>
+      <p>This is your dashboard where you can view and manage available food posts, track pickups, and update your NGO profile.</p>
+    </div>
+
+    <div class="card">
+      <h3>Today's Summary</h3>
+      <ul>
+        <li>Available Food Posts: 8</li>
+        <li>Completed Pickups: 3</li>
+        <li>Pending Confirmations: 2</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function logout() {
+      // You can clear session here if needed
+      window.location.href = "login.html";
+    }
+  </script>
+
+</body>
+</html>
